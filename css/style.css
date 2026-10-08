@@ -1,0 +1,738 @@
+
+
+/* Estilização geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #3a0246;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+.flex{
+    display: flex;
+}
+a {
+  text-decoration: none;
+}
+
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:  radial-gradient(circle at 10% 20%, #c522f6 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, #02144656 0%, transparent 20%);
+}
+
+.btnContato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #c522f6;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ;
+}
+
+.btnContato1 button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #c522f6;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ;
+}
+
+button:hover, form .btnEnviar input:hover{
+    box-shadow: 0px 0px 8px #c522f6;
+    transform: scale(1.07);
+}
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: #c522f6;
+
+}
+
+
+
+/* Estilo do cabeçalho */
+
+header{
+    padding: 15px 4%;
+    background-color: #291c6360;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+header > .interface .logo a img{
+    height: 50px ;
+    width: auto;
+
+}
+
+header a{
+    color: rgb(177, 172, 172);
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s ;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.07);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+header nav.menuDesktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/* Estilo do menu mobile */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: #c522f6;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #c522f6;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #c522f6;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000c0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+
+
+/* Estilo do topo do site */
+
+section.topoDoSite{
+    padding: 40px 4%;
+    padding-top: 10vh;
+    height: 650px;
+    align-items: center;
+}
+section.topoDoSite .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topoDoSite h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px
+}
+.topoDoSite .txtTopoSite h1 span{
+    color: #c522f6;
+    font-size: 84px;
+}
+.topoDoSite .txtTopoSite p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topoDoSite .imgTopoSite img{
+    position: relative;
+    width: 600px;
+    height: auto;
+    border-radius: 60px 15px 45px 30px;
+
+}
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* Estilo das especialidades*/
+
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidadesBox{
+    color: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    transition: .2s;
+    border: 2px solid #c522f6;
+}
+
+.especialidades .especialidadesBox:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff5d ;
+}
+
+
+.especialidades .especialidadesBox i{
+    font-size: 70px;
+    color: #c522f6;
+}
+.especialidades .especialidadesBox h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Estilo do Sobre*/
+
+section.sobre{
+    padding: 80px 4%;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+section.sobre img{
+    width: 450px;
+    height: auto; 
+    border-radius: 30px;
+}
+
+.sobre .txtSobre{
+    color: #fff;
+
+}
+
+.sobre .txtSobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txtSobre h2 span{
+    color: #c522f6;
+    display: block;
+}
+
+.sobre .txtSobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btnSocial button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #c522f6;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo do cliente satisfeitos*/
+
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff10;
+}
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+
+section.portifolio .flex img{
+    width: 260px;
+    height: auto;
+    background-color: #c522f6;
+    background-size: cover;
+    background-position: 100% 0%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carrossel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 33.33%; /* Cada slide ocupará 1/3 da largura do container */
+    max-width: 33.33%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ESTILO VALORES */
+
+section.valores{
+    padding: 40px 4%;
+}
+
+section.valores .flex{
+    gap: 60px;
+}
+
+.valores .valoresBox{
+    color: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    transition: .2s;
+    border: 2px solid #c522f6;
+}
+
+.valores .valoresBox:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff5d ;
+}
+
+
+.valores .valoresBox i{
+    font-size: 70px;
+    color: #c522f6;
+}
+.valores .valoresBox h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+.valores .valoresBox p{
+    border-bottom: 1px solid #dddddd44; /* Adiciona uma linha abaixo de cada item */
+    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+    margin-bottom: 5px;
+    
+}
+
+.valores .valoresBox .botaoVal{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.valores .valoresBox button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #c522f6;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo tutorial */
+
+section.tutorial{
+    padding: 80px 4%;
+}
+
+section.tutorial h2{
+    margin-bottom:60px ;
+}
+
+section.tutorial .interface {
+  display: flex;
+  flex-wrap: wrap; /* Para dispositivos menores */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.video {
+  max-width: 400px;
+  text-align: center;
+  flex: 1 1 300px;
+}
+
+.video h3{
+    color: #fff;
+    background-color: #c522f6;
+    border-radius: 10px;
+    
+}
+
+/* ESTILO DO FORMULARIO DE CONTATO*/
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #615e5e31;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btnEnviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .btnEnviar input{
+    width: 120px;
+    background-color: #c522f6;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 30px;
+}
+
+/* acordion */
+
+.tab {
+  position: relative;
+  
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  color: #fff;
+  overflow: hidden;
+}
+
+.tab__label,
+.tab__close {
+  display: flex;
+  color: white;
+  background: #b322f619;
+  cursor: pointer;
+  border-bottom: 1px solid #c522f6;
+    border-top-right-radius: 10px;
+
+}
+.tab__label {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.tab__label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all 0.50s;
+}
+.tab input:checked + .tab__label::after {
+  transform: rotate(270deg);
+}
+.tab__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+/* ESTILO DO RODAPÉ*/
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff10;
+}
+footer .flex{
+    justify-content: space-between;
+}
+footer .line-footer{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.borda{
+    border-top:2px solid #c522f6;
+}
+
+footer .line-footer p i{
+    color: #c522f6;
+    font-size: 22px;
+}
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+}
+footer img{
+    height: 80px ;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 1020px){
+    /* Classes Gerais */
+
+    h2.titulo{
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 50px;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+    .topoDoSite .flex{
+        flex-direction: column-reverse;
+    }
+
+    .topoDoSite p {
+        text-align: center;
+    }
+
+    /* CABEÇALHO */
+    .menuDesktop, .btnContato{
+        display: none;
+    }
+
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    .btnContato1{
+        display: flex;
+        justify-content: center;
+
+    }
+
+     .btnContato1 button{
+        font-size: 32px;
+        margin-bottom: 20px;
+     }
+
+    /* Topo do Site */
+
+    section.topoDoSite .flex{
+        gap: 40px;
+    }
+
+    section.topoDoSite{
+        padding: 20px 8%;
+
+    }
+    .topoDoSite .txtTopoSite h1 span{
+        font-size: 40px;
+
+    }
+    
+    .topoDoSite h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .topoDoSite .imgTopoSite img{
+        width: 100%;
+    }
+
+    /* Estilo das especialidades*/
+
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    /* Estilo do Sobre*/
+
+    section.sobre{
+        padding: 80px 8%;
+    }
+
+    .sobre .txtSobre h2{
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .btnSocial{
+        text-align: center;
+    }
+
+    section.sobre img{
+        width: 100%;
+        height: auto; 
+    }
+
+    /* clientes satisfeitos */
+
+    .slide {
+    min-width: 100%; /* Cada slide ocupará 1/3 da largura do container */
+    max-width: 100%;
+    }
+    /* Portifólio */
+    section.portfolio{
+        padding: 80px 8%;
+        
+    }
+
+    .imgPort{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    section.portifolio .flex{
+        gap: 60px;
+        flex-direction: column;
+
+
+    }
+
+    /* Rodapé */
+
+    footer .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+    footer img{
+        margin-bottom: 15px;
+    }
+    .borda{
+        gap: 10px;
+    }
+    .btnSocial{
+        margin: 15px;
+    }
+
+}
